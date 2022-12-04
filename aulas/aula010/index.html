@@ -8,15 +8,18 @@
     <style>
         body{
             text-align: center;
+            height: 100vh;
         }
     </style>
 </head>
-<body>
+<body onresize="console.log('Você alterou o tamanho da tela');">
     <h1>Trabalhando com Java Script</h1>
     <h2>Eventos em Java Script</h2>
-    <button onclick="Clique()" ondblclick="DuploClique()">Clique aqui</button> <br/><br/>
-
-    <div onmouseover="MouseCima()"style="width: 75%; height: 200px;background-color: purple; margin:auto;"></div>
+    <button onclick="Clique()" ondblclick="DuploClique()" onmousedown="precionarBotao()" onmouseup="soltarBotao()">Clique aqui</button> <br/><br/>
+    <p id="texto"></p>
+    <div id="teste" onmousemove="adicionaTexto()" onmouseout="viraRoxo()" onmouseover="viraAmarelo()" style="width: 75%; height: 200px;background-color: purple; margin:auto;"></div><br/><br/>
+    
+    <input id="campoTexto" onkeypress="Tecla()" onfocus="Focus()" type="text" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; text-align:center;" placeholder="Digite qualquer coisa">
 
     <script src="../js010/index.js">
     </script>
