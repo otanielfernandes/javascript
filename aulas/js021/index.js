@@ -19,5 +19,4 @@ function ativarContagem(){
 
 function pararContagem(){
     clearInterval(tempo);
-    document.getElementById("teste").innerHTML = "Você parou o tempo";
 }
